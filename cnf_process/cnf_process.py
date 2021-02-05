@@ -176,7 +176,7 @@ class CNFStatement():
         self.logger.log(level=1, msg=' is out of range')
         self.math_statement = expr
 
-    def reduce(self, variable: str, result: bool):
+    def evaluate(self, variable: str, result: bool):
         """
         This function take a input and simplify the boolean expr with the result of one of the proposition.
         :param variable: the variable to be evaluated.
@@ -193,4 +193,12 @@ class CNFStatement():
             expr = expr.subs({variable: result})
         else:
             expr = expr.subs(variable, 0)
+        self.math_statement = expr
         return expr
+
+    def get_current_expression_in_string(self) -> str:
+        """
+        Returns the current boolean cnf expression in string format
+        :return: str(self.math_statement)
+        """
+        return str(self.math_statement)

@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="cnf_process",
-    version="0.0.1",
+    version="0.1.2",
     author="Henry He",
     author_email="hehenry14@gmail.com",
     description="A small package that convert a string of boolean expression into sympy object in the conjunctive "
@@ -16,7 +16,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
     ],
     python_requires='>=3.7',
